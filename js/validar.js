@@ -1,5 +1,10 @@
-//criando os objetos dos elementos de texto do form
+/**
+ * Aluno: Gabriel Henrique Brioto
+ * Nusp: 12547764
+ * Site: https://briotisk.github.io/cadastro-usuario/
+ */
 
+//criando os objetos dos elementos de texto do form
 var nome = document.querySelector("#inputName");
 var nomeHelp = document.querySelector("#inputNameHelp");
 var ano = document.querySelector("#inputYear");
