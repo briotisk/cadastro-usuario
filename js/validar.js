@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 nome.addEventListener('focusout', () => {
     //declaração da expressão regular para definir o formato de um nome válido
-    const regexNome = /^[A-Z][a-z]+$/;
+    const regexNome = /^([A-Z][a-z]*)( [A-Z][a-z]*)*$/;
+
     //tirar (trim) espaços em branco antes e depois da string
     const nomeTrimado = nome.value.trim();
 
