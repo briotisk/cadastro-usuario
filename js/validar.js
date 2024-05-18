@@ -155,35 +155,35 @@ senha.addEventListener('focusout', () => {
     if(senha.value.length < 6 || senha.value.length > 20) {
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha deve ter entre 6 e 20 caracteres";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
     }else if(senha.value.match(regexCharEsp)==null){//testa se a senha contém ao menos um caractere especial
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha deve conter no mínimo um caractere especial";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
     }else if(senha.value.match(regexMai)==null){//testa se a senha contém ao menos uma letra maiúscula
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha deve conter no mínimo uma letra maiúscula";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
     }else if(senha.value.match(regexMin)==null){//testa se a senha contém ao menos uma letra minúscula
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha deve conter no mínimo uma letra minúscula";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
     }else if(senha.value.match(regexNum)==null){//testa se a senha contém ao menos um número
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha deve conter no mínimo um número";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
@@ -191,7 +191,7 @@ senha.addEventListener('focusout', () => {
 
         //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
         //senhaHelp.textContent = "A senha não deve conter o seu ano de nascimento";
-        senhaHelp.textContent = "Senha inválida";
+        senhaHelp.textContent = "Senha Inválida";
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
@@ -210,7 +210,7 @@ senha.addEventListener('focusout', () => {
             if(senhaLowerCase.includes(nomeLowerCase)) {
                 //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
                 //senhaHelp.textContent = "A senha não deve conter o seu nome ou sobrenome";
-                senhaHelp.textContent = "Senha inválida";
+                senhaHelp.textContent = "Senha Inválida";
                 senhaHelp.style.color="red";
                 valido.senha = false;
                 meter.value = 0;
