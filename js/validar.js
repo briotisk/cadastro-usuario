@@ -60,7 +60,9 @@ nome.addEventListener('focusout', () => {
     //tirar (trim) espaços em branco antes e depois da string
     const nomeTrimado = nome.value.trim();
 
-    if(nomeTrimado.match(regexNome)==null || nomeTrimado.length < 7){
+    console.log(nomeTrimado.match(regexNome));
+
+    if(nomeTrimado.match(regexNome)==null || nomeTrimado.length < 6){
         //muda o conteúdo e o estilo do objeto nomeHelp que referencia o elemento html com id=inputNameHelp
         nomeHelp.textContent = "Nome inválido"; 
         nomeHelp.style.color="red";
