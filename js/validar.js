@@ -229,7 +229,7 @@ senha.addEventListener('focusout', () => {
             && (senha.value.match(regexNum || []).length > 1)) {
 
                 //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
-                senhaHelp.textContent = "Senha forte";
+                senhaHelp.textContent = "Senha Forte";
                 senhaHelp.style.color="green";
                 meter.value = 30;
                 meter.style.color = "green";
@@ -246,7 +246,7 @@ senha.addEventListener('focusout', () => {
             && (senha.value.match(regexNum || []).length >= 1)) {
 
                 //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
-                senhaHelp.textContent = "Senha moderada";
+                senhaHelp.textContent = "Senha Moderada";
                 senhaHelp.style.color="yellow";
                 meter.value = 20;
                 meter.style.color = "yellow";
@@ -255,7 +255,7 @@ senha.addEventListener('focusout', () => {
         //se a senha não cumpre os requisitos para ser Forte nem moderada, automaticamente, só resta a opção de ela ser fraca
         }else {
             //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
-            senhaHelp.textContent = "Senha fraca";
+            senhaHelp.textContent = "Senha Fraca";
             senhaHelp.style.color="red";
             meter.value = 10;
             meter.style.color = "red";
