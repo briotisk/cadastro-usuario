@@ -139,6 +139,32 @@ email.addEventListener('focusout', () => {
 
 senha.addEventListener('focusout', () => {
 
+    //separa o nome e sobrenome em um vetor
+    const nomes = nome.value.split(' ');
+
+    //Percorre o vetor verificando se cada um dos elementos está contido na senha
+    for(const nome of nomes) {
+        console.log(nome);
+
+        //converte as duas strings para lower case pois a função "includes" é case sensitive
+        const nomeLowerCase = nome.toLowerCase();
+        const senhaLowerCase = senha.value.toLowerCase();
+        console.log(senhaLowerCase);
+        console.log(senhaLowerCase.includes(nomeLowerCase));
+
+        //verifica se a senha inclui o elemento do vetor "nomes"
+        if(senhaLowerCase.includes(nomeLowerCase)) {
+            //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
+            //senhaHelp.textContent = "A senha não deve conter o seu nome ou sobrenome";
+            senhaHelp.textContent = "Senha Inválida";
+            senhaHelp.style.color="red";
+            valido.senha = false;
+            meter.value = 0;
+            return;
+        }
+
+    }
+
     //expressão regular para caracteres especiais
     const regexCharEsp = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/g;
 
@@ -195,28 +221,7 @@ senha.addEventListener('focusout', () => {
         senhaHelp.style.color="red";
         valido.senha = false;
         meter.value = 0;
-    }else{
-        //separa o nome e sobrenome em um vetor
-        const nomes = nome.value.split(' ');
-
-        //Percorre o vetor verificando se cada um dos elementos está contido na senha
-        for(const nome of nomes) {
-
-            //converte as duas strings para lower case pois a função "includes" é case sensitive
-            const nomeLowerCase = nome.toLowerCase();
-            const senhaLowerCase = senha.value.toLowerCase();
-
-            //verifica se a senha inclui o elemento do vetor "nomes"
-            if(senhaLowerCase.includes(nomeLowerCase)) {
-                //muda o conteúdo e o estilo do objeto senhaHelp que referencia o elemento html com id=inputPasswordHelp
-                //senhaHelp.textContent = "A senha não deve conter o seu nome ou sobrenome";
-                senhaHelp.textContent = "Senha Inválida";
-                senhaHelp.style.color="red";
-                valido.senha = false;
-                meter.value = 0;
-            }
-
-        }
+    }else {
 
         //verifica se a senha cumpre os requisitos para ser uma senha forte, isto é:
         //possuir mais de 12 caracteres
