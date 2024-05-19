@@ -60,8 +60,6 @@ nome.addEventListener('focusout', () => {
     //tirar (trim) espaços em branco antes e depois da string
     const nomeTrimado = nome.value.trim();
 
-    console.log(nomeTrimado.match(regexNome));
-
     if(nomeTrimado.match(regexNome)==null || nomeTrimado.length < 6){
         //muda o conteúdo e o estilo do objeto nomeHelp que referencia o elemento html com id=inputNameHelp
         nomeHelp.textContent = "Nome inválido"; 
@@ -144,13 +142,10 @@ senha.addEventListener('focusout', () => {
 
     //Percorre o vetor verificando se cada um dos elementos está contido na senha
     for(const nome of nomes) {
-        console.log(nome);
 
         //converte as duas strings para lower case pois a função "includes" é case sensitive
         const nomeLowerCase = nome.toLowerCase();
         const senhaLowerCase = senha.value.toLowerCase();
-        console.log(senhaLowerCase);
-        console.log(senhaLowerCase.includes(nomeLowerCase));
 
         //verifica se a senha inclui o elemento do vetor "nomes"
         if(senhaLowerCase.includes(nomeLowerCase)) {
