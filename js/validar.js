@@ -119,7 +119,7 @@ ano.addEventListener('focusout', () => {
 
 email.addEventListener('focusout', () => {
     //declaração da expressão regular para definir o formato de um email válido
-    const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(br|com|net|org)$/;
+    const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.(br|com|net|org)$/;
 
     //tirar (trim) espaços em branco antes e depois da string
     const emailTrimado = email.value.trim();
